@@ -112,6 +112,16 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.figure-caption {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: justify;
+  hyphens: auto;
+}
+
 
 /* Publication Content Styling */
 .publication-title {

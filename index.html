@@ -245,21 +245,28 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yeheng Zong</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Pou-Chun Kung</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yike Pan</a></sup>,</span>
-                    <span class="author-block">
-                      <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Seth Isaacson</a></sup>,</span>
-                      <span class="author-block">
-                        <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Yizhou Chen</a></sup>,</span>
-                      <span class="author-block">
-                        <a href="AUTHOR PERSONAL LINK" target="_blank">Ram Vasudevan</a></sup>,</span>
-                      <span class="author-block">
-                        <a href="AUTHOR PERSONAL LINK" target="_blank">Katherine A. Skinner</a>
-                  </span>
-                  </div>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yeheng Zong</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Pou-Chun Kung</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yike Pan</a>,
+              </span>
+              <span class="author-block">
+                <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Seth Isaacson</a>,
+              </span>
+              <span class="author-block">
+                <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Yizhou Chen</a>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="AUTHOR PERSONAL LINK" target="_blank">Ram Vasudevan</a>,
+              </span>
+              <span class="author-block">
+                <a href="AUTHOR PERSONAL LINK" target="_blank">Katherine A. Skinner</a>
+              </span>
+            </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
@@ -317,7 +324,7 @@
           <figure class="image">
             <!-- TODO: Replace with a representative figure for the abstract -->
             <img src="static/images/teaser_figure.png" alt="High-level overview of HumanSplat" loading="lazy">
-            <figcaption class="has-text-centered">
+            <figcaption class="figure-caption">
               HumanSplat advances both SMPL estimation and novel-view rendering by enabling joint optimization of the human mesh and Gaussian splats, taking SMPL estimates from HMR 2.0 as input. In contrast, prior works, such as GART, rely on accurate SMPL from motion capture or refined SMPL to deform Gaussians for avatar reconstruction. These methods also deliberately decouple SMPL from Gaussian splats to improve rendering quality, but this prevents refinement of human pose estimation and ultimately results in sub-optimal novel-view performance. HumanSplat addresses this limitation and allows human pose and Gaussian splats to mutually refine each other. As a result, it achieves more accurate SMPL estimation and consistently higher rendering quality.
             </figcaption>
           </figure>
@@ -340,14 +347,14 @@
         <figure class="image">
           <!-- TODO: Replace with an illustrative figure for your method -->
           <img src="static/images/overview.png" alt="Method overview illustration" loading="lazy">
-          <figcaption class="has-text-centered">
+          <figcaption class="figure-caption">
             Method Overview. HumanSplat takes SMPL estimation as input and combines SMPL with Gaussians with the proposed CAMEL.This enables both SMPL and Gaussian representation optimization using rendered color and depth images.
           </figcaption>
         </figure>
         <figure class="image">
           <!-- TODO: Replace with an illustrative figure for your method -->
           <img src="static/images/CAMEL.png" alt="CAMEL illustration" loading="lazy">
-          <figcaption class="has-text-centered">
+          <figcaption class="figure-caption">
             Cloth-Aware Mesh-Embedded Loss (CAMEL) illustration. CAMEL loosely couples the SMPL mesh with the Gaussian representation. The key motivation is to better model clothing by allowing local non-rigid deformations. CAMEL constrains Gaussians to remain close to the human mesh while enforcing surface alignment and ensuring full mesh coverage. n is the normal of the mesh vertex and δ represents the tolerance margin between the cloth and the body.
           </figcaption>
         </figure>
