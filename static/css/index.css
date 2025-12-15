@@ -118,7 +118,7 @@ body {
   color: var(--text-secondary);
   text-align: justify;
   text-justify: inter-word;
-  text-align-last: justify;
+  text-align-last: left;
   hyphens: auto;
 }
 
