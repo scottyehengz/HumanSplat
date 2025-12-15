@@ -289,7 +289,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (Coming Soon)</span>
+                    <span>Code (Coming Soon!)</span>
                   </a>
                 </span>
                 </a>
@@ -303,24 +303,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -330,8 +312,26 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Accurately recovering human pose and appearance from video is an essential component of scene reconstruction, with applications to motion capture, motion prediction, virtual reality, and digital twinning. Despite significant interest in building realistic human avatars from video, this paper demonstrates that existing methods do not accurately recover the 3D geometry of humans. ViT-based approaches are not consistently reliable and can overfit to 2D views, while NeRF- and Gaussian Splatting–based avatars treat pose and appearance separately, limiting rendering generalization to new poses. To resolve these shortcomings, this paper proposes HumanSplat, a joint optimization framework that refines 3D human poses while simultaneously learning a high-fidelity avatar for novel-view and novel-pose synthesis. Our key insight is to close the loop between geometric pose estimation and differentiable rendering. Unlike prior human avatar methods that rely on accurate human pose obtained through motion capture systems or offline refinement, which are impractical in in-the-wild scenarios, our approach uses only human mesh estimates from a state-of-the-art human pose estimator to better reflect real-world conditions. Therefore, instead of using the human pose only as a deformation prior, HumanSplat backpropagates photometric, segmentation, and depth losses through a differentiable renderer to the pose parameters and global position. This coupling refines the global 3D pose over time, improving accuracy and alignment while producing better renderings from novel views. Experiments show consistent improvements over pose recovery baselines that omit image-level refinement and avatar baselines that decouple pose estimation from avatar reconstruction.
           </p>
+          <figure class="image">
+            <!-- TODO: Replace with a representative figure for the abstract -->
+            <img src="static/images/teaser_figure.png" alt="High-level overview of HumanSplat" loading="lazy">
+            <figcaption class="has-text-centered">
+              HumanSplat advances both SMPL estimation and novel-
+              view rendering by enabling joint optimization of the human mesh
+              and Gaussian splats, taking SMPL estimates from HMR 2.0 as input. In contrast, prior works, such as GART, rely on
+              accurate SMPL from motion capture or refined SMPL to deform
+              Gaussians for avatar reconstruction. These methods also deliber-
+              ately decouple SMPL from Gaussian splats to improve rendering
+              quality, but this prevents refinement of human pose estimation and
+              ultimately results in sub-optimal novel-view performance. Hu-
+              manSplat addresses this limitation and allows human pose and
+              Gaussian splats to mutually refine each other. As a result, it
+              achieves more accurate SMPL estimation and consistently higher
+              rendering quality.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -340,68 +340,39 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<!-- Methods section -->
+<section class="section hero is-light" id="methods">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-three-quarters">
+        <h2 class="title is-3 has-text-centered">Method Overview</h2>
+        <div class="content has-text-justified">
         </div>
+        <figure class="image">
+          <!-- TODO: Replace with an illustrative figure for your method -->
+          <img src="static/images/overview.png" alt="Method overview illustration" loading="lazy">
+          <figcaption class="has-text-centered">
+            Method Overview. HumanSplat takes SMPL estimation as input and combines SMPL with Gaussians with the proposed CAMEL.This enables both SMPL and Gaussian representation optimization using rendered color and depth images.
+          </figcaption>
+        </figure>
+        <figure class="image">
+          <!-- TODO: Replace with an illustrative figure for your method -->
+          <img src="static/images/CAMEL.png" alt="CAMEL illustration" loading="lazy">
+          <figcaption class="has-text-centered">
+            Cloth-Aware Mesh-Embedded Loss (CAMEL) illustration. CAMEL loosely couples the SMPL mesh with the Gaussian rep-
+resentation. The key motivation is to better model clothing by allowing local non-rigid deformations. CAMEL constrains Gaussians to
+remain close to the human mesh while enforcing surface alignment and ensuring full mesh coverage. n is the normal of the mesh vertex
+and δ represents the tolerance margin between the cloth and the body.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End methods section -->
+
+
+
 
 
 <!-- Video carousel -->
@@ -414,21 +385,14 @@
           <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+            <source src="static/videos/render_deformed_yeheng_on_shohei.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+            <source src="static/videos/render_deformed_yeheng_on_brady.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -442,20 +406,7 @@
 
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
