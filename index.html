@@ -21,9 +21,9 @@
   <!-- TODO: Replace with your institution or lab name -->
   <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
   <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:title" content="HumanSplat">
   <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta property="og:description" content="HumanSplat: Closing the Loop Between Human Mesh Recovery and Gaussian Splatting Avatars">
   <!-- TODO: Replace with your actual website URL -->
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
   <!-- TODO: Create a 1200x630px preview image and update path -->
@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>HumanSplat - AUTHOR_NAMES | University of Michigan Robotics</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -318,18 +318,7 @@
             <!-- TODO: Replace with a representative figure for the abstract -->
             <img src="static/images/teaser_figure.png" alt="High-level overview of HumanSplat" loading="lazy">
             <figcaption class="has-text-centered">
-              HumanSplat advances both SMPL estimation and novel-
-              view rendering by enabling joint optimization of the human mesh
-              and Gaussian splats, taking SMPL estimates from HMR 2.0 as input. In contrast, prior works, such as GART, rely on
-              accurate SMPL from motion capture or refined SMPL to deform
-              Gaussians for avatar reconstruction. These methods also deliber-
-              ately decouple SMPL from Gaussian splats to improve rendering
-              quality, but this prevents refinement of human pose estimation and
-              ultimately results in sub-optimal novel-view performance. Hu-
-              manSplat addresses this limitation and allows human pose and
-              Gaussian splats to mutually refine each other. As a result, it
-              achieves more accurate SMPL estimation and consistently higher
-              rendering quality.
+              HumanSplat advances both SMPL estimation and novel-view rendering by enabling joint optimization of the human mesh and Gaussian splats, taking SMPL estimates from HMR 2.0 as input. In contrast, prior works, such as GART, rely on accurate SMPL from motion capture or refined SMPL to deform Gaussians for avatar reconstruction. These methods also deliberately decouple SMPL from Gaussian splats to improve rendering quality, but this prevents refinement of human pose estimation and ultimately results in sub-optimal novel-view performance. HumanSplat addresses this limitation and allows human pose and Gaussian splats to mutually refine each other. As a result, it achieves more accurate SMPL estimation and consistently higher rendering quality.
             </figcaption>
           </figure>
         </div>
@@ -359,10 +348,7 @@
           <!-- TODO: Replace with an illustrative figure for your method -->
           <img src="static/images/CAMEL.png" alt="CAMEL illustration" loading="lazy">
           <figcaption class="has-text-centered">
-            Cloth-Aware Mesh-Embedded Loss (CAMEL) illustration. CAMEL loosely couples the SMPL mesh with the Gaussian rep-
-resentation. The key motivation is to better model clothing by allowing local non-rigid deformations. CAMEL constrains Gaussians to
-remain close to the human mesh while enforcing surface alignment and ensuring full mesh coverage. n is the normal of the mesh vertex
-and δ represents the tolerance margin between the cloth and the body.
+            Cloth-Aware Mesh-Embedded Loss (CAMEL) illustration. CAMEL loosely couples the SMPL mesh with the Gaussian representation. The key motivation is to better model clothing by allowing local non-rigid deformations. CAMEL constrains Gaussians to remain close to the human mesh while enforcing surface alignment and ensuring full mesh coverage. n is the normal of the mesh vertex and δ represents the tolerance margin between the cloth and the body.
           </figcaption>
         </figure>
       </div>
@@ -375,31 +361,39 @@ and δ represents the tolerance margin between the cloth and the body.
 
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/render_deformed_yeheng_on_shohei.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/render_deformed_yeheng_on_brady.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+<!-- Teaser video: Shohei -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">HumanSplat Deforms on Shohei</h2>
+      <video poster="" id="shohei-teaser" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/render_deformed_yeheng_on_shohei.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3 class="subtitle has-text-centered">
+        HumanSplat adapts to Shohei's motion, jointly refining pose and appearance for consistent novel-view synthesis.
+      </h3>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End teaser video: Shohei -->
+
+<!-- Teaser video: Braday -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">HumanSplat Deforms on Brady</h2>
+      <video poster="" id="braday-teaser" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/render_deformed_yeheng_on_brady.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3 class="subtitle has-text-centered">
+        HumanSplat deforms the avatar to match Braday's sequence, preserving geometry while enabling free-viewpoint playback.
+      </h3>
+    </div>
+  </div>
+</section>
+<!-- End teaser video: Braday -->
 
 
 
